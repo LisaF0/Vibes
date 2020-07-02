@@ -40,3 +40,26 @@ $(document).ready(function(){
     toggleNav()
   })
 })
+
+// ACCORDION
+
+
+$('div.accordionHeader').click(function(){
+  if($(this).next().is(":visible")){
+    $(this).next().hide('slow')
+  } else {
+    $('div.accordionContent:visible').hide('slow')
+    $(this).next().show('slow');
+  }
+})
+
+
+
+// $(document).ready(function(){
+//   $('.accordionHeader').click(function(){
+//     $(".accordionCotent").toggleClass("ouvrir")
+//     $(this).toggleClass(["fa-plus", "fa-minus"])
+//   })
+// })
+
+// <i class="fas fa-minus"></i>f068

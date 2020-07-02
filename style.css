@@ -210,9 +210,29 @@ header nav a{
     font-size: 1.5em;
 }
 #about>div:last-child{
-    
     margin-top: 30px;
 }
+/* ACCORDION */
+
+#accordionContainer{
+    border: 1px solid rgb(228, 225, 225);
+    padding: 1em;
+    margin: 1em;
+}
+#accordionContainer i{
+    font-size: 1em;
+    margin: 5px;
+}
+.accordionHeader{
+    cursor: pointer;
+}
+.accordionContent{
+    padding-left: 1.5em;
+}
+/* .ouvrir{
+
+} */
+
 
 /* PORTFOLIO */
 
@@ -468,7 +488,7 @@ footer p{
 
 /* reste à faire :
 modal pour les img https://www.w3schools.com/howto/howto_css_modals.asp
-accordion https://codepen.io/varqes/pen/aqPQKL   ou   https://codepen.io/Sp00ky/pen/zBZZvq
+accordion https://codepen.io/maesi/pen/aFBoc
 menu burger stylé  https://codepen.io/duarteleme/pen/XNROQM
 goute d'eau dark mode ou autre https://codepen.io/ttorquati/pen/abvvwmX
 trie audio video etc + LOAD MORE
