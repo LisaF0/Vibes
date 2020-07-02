@@ -1,0 +1,85 @@
+@media screen and (min-width: 800px){
+    #wrapper{
+        max-width: 80vw;
+        margin: auto;
+    }
+    #section1 p, h2, #section1 a, #buy p, #buy a{ 
+        text-align: center;
+    }
+    /* HEADER */
+    #wrapper header{
+        justify-content: space-around;
+    }
+
+    /* NAV */
+    
+    header nav{
+        display: flex;
+        align-items: center;
+    }
+    header nav a{
+        margin-right: 25px;
+        margin-left: 0
+    }
+    header nav a:hover{
+        color:  #ddd;
+    }
+    #burger{
+        display: none;
+    }
+
+
+    /* PORTFLIO */
+    .container{
+        width: 25%;
+    }
+    .container img{
+        vertical-align: bottom;
+    }
+    #portfolio nav{
+        margin-top: 15px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+    #portfolio nav .button{
+        margin: 0;
+    }
+
+
+    /* CONTACT */
+    #contact form{
+        display: flex;
+      
+    }
+
+    #contact form>div{
+        flex: 1;
+        padding: 0 1em;
+    }
+
+    /* PAGES */
+    #page{
+        flex-direction: initial;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+    #page hr{
+        margin-left: 0;
+    }
+    #page>div{
+        width: 30%;
+    }
+    #page input[type=email]{
+        margin: initial;
+    }
+    #page input[type=submit]{
+        margin: 16px 0;
+    }
+
+    /* FOOTER */
+    footer{
+        flex-direction: initial;
+        justify-content: space-around;
+    }
+}

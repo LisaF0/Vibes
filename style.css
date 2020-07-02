@@ -1,0 +1,474 @@
+*{
+   box-sizing: border-box;
+   font-family: 'Ubuntu', sans-serif; 
+}
+html{
+    background-image: url(img/etoileBg.jpg);
+}
+body{
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(250, 175, 0, 0.753) 0%, rgba(255,66,66,0.7399334733893557) 15%, rgba(255,154,58,1) 35%, rgba(221,57,57,1) 72%, rgb(219, 151, 48) 100%);
+    background-size: cover; 
+}
+#wrapper{
+    max-width: 1024px;
+    margin: auto;
+}
+hr{
+    width: 50px;
+    border: 1px solid rgb(255, 123, 0);
+    background-color: rgb(255, 123, 0);
+    margin-bottom: 30px;
+}
+h2{
+    text-transform: uppercase;
+    margin: 0;
+}
+
+section{
+    padding: 30px;
+}
+h3{
+    margin-top: 0;
+}
+.bold{
+    font-weight: bold;
+}
+.button{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+.alignCenter{
+    text-align: center;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; 
+    outline: none; /* Remove outline */
+    background-color: #555;
+    cursor: pointer; 
+    padding: 7px; 
+    border-radius: 10px; 
+  }
+#myBtn i{
+    color: white;
+}
+  #myBtn:hover {
+    background-color: rgb(255, 123, 0); 
+  }
+
+/* HEADER */
+
+#wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: #555;
+    z-index:99;
+} 
+
+header img{
+    height: 50px;
+    margin: 16px 
+}
+header nav{
+    display: none;
+}
+
+header nav a{
+    text-decoration: none;
+    margin: 0.5em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#burger{
+    color:white;
+    cursor: pointer;
+    position: absolute;
+    top: 4vh;
+    right: 4vh;
+}
+
+.mobile{
+    position: fixed;
+    display: flex;
+    padding: 5em 5em 1.5em 1.5em;
+    flex-direction: column;
+    justify-content: space-around;
+    right: 0;
+    top: 0;
+	opacity: 0;
+    overflow: hidden;
+    height: 0vh;
+    transition: height 1s, opacity 1s;
+    background-color: #555;
+    margin:0;
+}
+.mobile.open{
+    height: 50vh;
+    opacity: 1;
+}
+
+
+
+
+/* MAIN */
+
+/* SECTION1 */
+
+
+#section1{
+    background-image: url("img/forestBg.jpg");
+    background-size: cover;
+    padding: 15% 15% 10% 15%;
+}
+#section1>h2, #section1>p, #section1>a{
+    color: white;
+}
+#section1>h2{
+    font-size: 2em;
+}
+#section1>p{
+    margin: 15px 0 40px 0;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+#section1>a{
+    border: 2px solid white;
+    padding: 0.75em;
+}
+#section1>a:hover{
+    border: 2px solid rgb(255, 123, 0);
+    color: rgb(255, 123, 0);
+}
+
+
+
+/* ABOUT */
+
+#about{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: rgb(90, 90, 90);
+}
+#about h3{
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 0.5px 0.5px rgb(143, 143, 143);
+}
+#about article p{
+    font-size: 1.5em;
+}
+#about article p:last-child, #about div>p:last-child{
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+#about article a{
+    color: rgb(255, 123, 0);
+}
+#about article a:hover{
+    text-decoration: underline;
+}
+
+#about div>dl dd{
+    margin: 0;
+}
+#about div>dl>dt:first-child{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#about>div, #about article{
+    margin-bottom: 32px;
+}
+#about div:last-child{
+    margin-bottom: 0;
+}
+#about div div a{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+}
+#about i{
+    color: rgb(255, 123, 0);
+    font-size: 1.5em;
+}
+#about>div:last-child{
+    
+    margin-top: 30px;
+}
+
+/* PORTFOLIO */
+
+#portfolio{
+    background-color: white;
+    border-bottom: 1px solid rgb(228, 225, 225);
+}
+
+#portfolio img{
+    height: auto;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.container i{
+    position: absolute;
+    left: 0;
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    font-size: 4em;
+    opacity: 0.7;  
+}
+#portfolio nav a{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    margin: 10px 10px 0 0;
+
+}
+#portfolio nav a:hover{
+    color: rgb(255, 123, 0);
+}
+
+#portfolio .button{
+    border: 2px solid rgb(255, 123, 0);
+    color: rgb(255, 123, 0);
+    padding : 5px;
+}
+#portfolio .button:hover{
+    color: white;
+    background-color:rgb(255, 123, 0);
+}
+#portfolio nav{
+    margin-top: 20px;
+}
+#galerie{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container:hover i{
+    display: inline-flex;
+}
+
+
+/* TESTIMONIALS */
+
+#testimonials{
+    background-color: white;
+}
+blockquote{
+    font-style: italic;
+    font-weight: lighter;
+}
+cite{
+    font-style: normal;
+    font-size: small;
+}
+#testimonials img{
+    height: 70px;
+}
+#testimonials div>div{
+    padding: 40px;
+    border-bottom: 1px solid rgb(228, 225, 225);
+}
+#testimonials div>div:last-child{
+    border-bottom: none;
+}
+#testimonials div:nth-child(5){
+    border-bottom: none;
+}
+#testimonials .paddingTopZero{
+    padding-top:0;
+}
+#testimonials .button{
+    color: rgb(255, 123, 0);
+    border: 1px solid rgb(255, 123, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: bold;
+}
+#testimonials .button:hover{
+    color: white;
+    border: 1px solid rgb(255, 123, 0);
+    background-color:rgb(255, 123, 0);
+}
+
+
+/* BUY */
+
+#buy{
+    color: white;
+    background-image: url("img/neige2.jpg"); /* parallax */
+    min-height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#buy a{
+    color: white;
+    border: 1px solid rgb(255, 123, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+#buy a:hover{
+    color: rgb(255, 123, 0);
+    border: 1px solid rgb(255, 123, 0);
+}
+
+
+/* CONTACT */
+#contact{
+    background-color: white; 
+}
+#contact h2{
+    color: rgb(90, 90, 90);
+}
+#contact .color{
+    color:rgb(255, 123, 0);
+}
+
+#contact input, textarea{
+    
+    width: 100%;
+    margin: auto;
+    background-color: rgb(206, 203, 203);
+    border: 1px solid rgb(206, 203, 203);
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+
+#contact label{
+    text-transform: uppercase;
+    color: rgb(90, 90, 90);
+    font-size: 0.8em;
+    text-align: left;  
+}
+#contact form{
+    text-align: left;
+}
+#contact form input[type=submit]{
+    background-color: rgb(255, 123, 0);
+    border: 2px solid  rgb(255, 123, 0);
+    color: white;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+#contact form input[type=submit]:hover{
+    background-color: rgb(207, 100, 0);
+    border: 2px solid  rgb(207, 100, 0);
+    color: white;
+    padding: 5px;
+}
+
+/* PAGE */
+
+#page{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: rgb(211, 209, 209);
+    font-weight: lighter ;
+}
+
+#page div{
+    margin-bottom: 30px;
+}
+#page a{
+    color:rgb(255, 123, 0);
+    text-decoration: none;
+}
+#page h3{
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+#page form{
+    display: flex;
+    flex-direction: column;
+}
+#page input::placeholder {
+    font-style: italic;
+    font-weight: lighter;
+    color: white;
+    text-align: left; 
+    font-size: 0.8em; 
+}
+#page input[type=email]{
+    padding: 10px;
+    background-color: rgb(98, 98, 98);
+    color: white;
+    border: 1px solid rgb(98, 98, 98);
+    width: 75%;
+    margin: auto;
+}
+#page input[type=submit]{
+    padding: 10px;
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid rgb(255, 123, 0);
+    width: 45%;
+    margin: 16px auto;
+}
+#page input[type=submit]:hover{
+    color: rgb(255, 123, 0);
+}
+
+
+/* FOOTER */
+footer{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #555;
+}
+footer, footer a{
+    color:white;
+}
+footer nav a{
+    margin-right: 10px;
+}
+footer p{
+    margin-top: 0;
+}
+
+/* reste à faire :
+modal pour les img https://www.w3schools.com/howto/howto_css_modals.asp
+accordion https://codepen.io/varqes/pen/aqPQKL   ou   https://codepen.io/Sp00ky/pen/zBZZvq
+menu burger stylé  https://codepen.io/duarteleme/pen/XNROQM
+goute d'eau dark mode ou autre https://codepen.io/ttorquati/pen/abvvwmX
+trie audio video etc + LOAD MORE
+pour finir Responsive desktop
+*/

@@ -1,0 +1,32 @@
+@media screen and (min-width: 1075px){
+
+    /* ABOUT */
+    #about{
+        flex-direction: initial;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+    #about>div, #about article{ 
+        width: 25%;
+    }
+
+    #about i{
+        float: left;
+        padding: 5px;
+    }
+
+
+
+    /* TESTIMONIALS */
+    #testimonials img, #testimonials div{
+        float: left;
+        text-align: left;
+        margin: 20px;
+       
+    }
+    #testimonials div:nth-child(2) img, #testimonials div:nth-child(2){
+        text-align: right;
+        float: right;
+    }
+
+}
