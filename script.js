@@ -44,25 +44,7 @@ $(document).ready(function(){
 // ACCORDION
 
 
-// $('div.accordionHeader').click(function(){
-//   if($(this).next().is(":visible")){
-//     $(this).next().hide('slow')
-//   } else {
-//     $('div.accordionContent:visible').hide('slow')
-//     $(this).next().show('slow');
-//   }
-// })
 
-
-
-// $(document).ready(function(){
-//   $('.accordionHeader').click(function(){
-//     $(".accordionContent").toggleClass("ouvrir")
-//     $(this).toggleClass(["fa-plus", "fa-minus"])
-//   })
-// })
-
-// <i class="fas fa-minus"></i>f068
 
 var acc = document.getElementsByClassName("accordionHeader");
 var i;
@@ -78,3 +60,24 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+/* MODAL */
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("btn");  
+var span = document.getElementsByClassName("close")[0];
+// var i;
+// for(var i = 0; i < modal.length; i++){
+  btn.onclick = function(){
+    modal.style.display = "block";
+  }
+  span.onclick = function(){
+    modal.style.display = "none";
+  }
+  window.onclick = function(event){
+    if(event.target == modal){
+      modal.style.display = "none";
+    }
+  }
+// }
