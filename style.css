@@ -209,9 +209,9 @@ header nav a{
     color: rgb(255, 123, 0);
     font-size: 1.5em;
 }
-#about>div:last-child{
+/* #about>div:last-child{
     margin-top: 30px;
-}
+} */
 /* ACCORDION */
 
 #accordionContainer{
@@ -226,12 +226,29 @@ header nav a{
 .accordionHeader{
     cursor: pointer;
 }
+
 .accordionContent{
     padding-left: 1.5em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
-/* .ouvrir{
+.accordionHeader:before{
+    content: '\f067';
+    
+    font-family: 'fontawesome';
+    float: left;
+    margin-right: 10px;
+    color:rgb(255, 123, 0);
+}
+.active:before{
+    content: '\f068';
+    font-family: 'fontawesome';
+    float: left;
+    margin-right: 10px;
+    color:rgb(255, 123, 0);
+}
 
-} */
 
 
 /* PORTFOLIO */

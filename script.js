@@ -44,22 +44,37 @@ $(document).ready(function(){
 // ACCORDION
 
 
-$('div.accordionHeader').click(function(){
-  if($(this).next().is(":visible")){
-    $(this).next().hide('slow')
-  } else {
-    $('div.accordionContent:visible').hide('slow')
-    $(this).next().show('slow');
-  }
-})
+// $('div.accordionHeader').click(function(){
+//   if($(this).next().is(":visible")){
+//     $(this).next().hide('slow')
+//   } else {
+//     $('div.accordionContent:visible').hide('slow')
+//     $(this).next().show('slow');
+//   }
+// })
 
 
 
 // $(document).ready(function(){
 //   $('.accordionHeader').click(function(){
-//     $(".accordionCotent").toggleClass("ouvrir")
+//     $(".accordionContent").toggleClass("ouvrir")
 //     $(this).toggleClass(["fa-plus", "fa-minus"])
 //   })
 // })
 
 // <i class="fas fa-minus"></i>f068
+
+var acc = document.getElementsByClassName("accordionHeader");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var accordionContent = this.nextElementSibling;
+    if (accordionContent.style.maxHeight) {
+      accordionContent.style.maxHeight = null;
+    } else {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+    }
+  });
+}
