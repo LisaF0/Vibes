@@ -63,9 +63,47 @@ h3{
 #myBtn i{
     color: white;
 }
-  #myBtn:hover {
+#myBtn:hover {
     background-color: rgb(255, 123, 0); 
   }
+
+/* DARK MODE */
+
+
+#drop{
+    position: fixed;
+    top: 5em;
+    left: 0;
+    background-color:#555;
+    padding: 10px;
+}
+#drop i{
+    color: white;
+    cursor: pointer;
+}
+/* @media screen and (prefers-colors-scheme: light){
+
+    main{
+        background-color:#555;
+        color: white;
+    }
+} */
+/* .darkMode{
+    color: white;
+    background-color: #555;
+}
+.lightMode{
+    color:  #555;
+    background-color: white;
+} */
+
+main{
+    mix-blend-mode: darken;
+}
+
+
+
+
 
 /* HEADER */
 
@@ -461,7 +499,6 @@ cite{
     background-color: rgb(207, 100, 0);
     border: 2px solid  rgb(207, 100, 0);
     color: white;
-    padding: 5px;
 }
 
 /* PAGE */
