@@ -1,21 +1,3 @@
-:root{
-    --color-w: white;
-    --color-b: black;
-    --color-o: rgb(255,123,0);
-}
-
-@media (prefers-color-scheme: dark){
-    :root{
-        --color-w: black;
-        --color-b: white;
-        --color-o:rgb(0, 132, 255);
-    }
-}
-
-
-
-
-
 
 *{
    box-sizing: border-box;
@@ -27,7 +9,7 @@ html{
 body{
     height: 100%;
     margin: 0;
-    background: linear-gradient(180deg, rgba(250, 175, 0, 0.753) 0%, rgba(255,66,66,0.7399334733893557) 15%, rgba(255,154,58,1) 35%, rgba(221,57,57,1) 72%, rgb(219, 151, 48) 100%);
+    background: var(--bg-color-linear-gradient);
     background-size: cover; 
 }
 #wrapper{
@@ -51,6 +33,7 @@ section{
 h3{
     margin-top: 0;
 }
+
 .bold{
     font-weight: bold;
 }
@@ -80,16 +63,14 @@ h3{
     border-radius: 10px; 
   }
 #myBtn i{
-    color: var(--color-w);
+    color: white;
 }
 #myBtn:hover {
     background-color: var(--color-o); 
   }
 
 /* DARK MODE */
-
-
-#drop{
+#drop button{
     position: fixed;
     top: 5em;
     left: 0;
@@ -97,8 +78,27 @@ h3{
     padding: 10px;
 }
 #drop i{
-    color: var(--color-w);
+    color: var(--text-color-white);
     cursor: pointer;
+}
+
+
+/* COLOR */
+
+.bg-color-black{
+    background-color: var(--bg-color-black);
+}
+.bg-color-white{
+    background-color: var(--bg-color-white);
+}
+.text-color-white{
+    color: var(--text-color-white);
+}
+.text-color-grey{
+    color: var(--text-color-grey);
+}
+.color-orange{
+    color: var(--color-o);
 }
 
 
@@ -132,12 +132,12 @@ header nav{
 header nav a{
     text-decoration: none;
     margin: 0.5em;
-    color: var(--color-w);
+    color: white;
     font-weight: bold;
     text-transform: uppercase;
 }
 #burger{
-    color:var(--color-w);
+    color:white;
     cursor: pointer;
     position: absolute;
     top: 2vh;
@@ -178,7 +178,7 @@ header nav a{
     padding: 15% 15% 10% 15%;
 }
 #section1>h2, #section1>p, #section1>a{
-    color: var(--color-w);
+    color: white;
 }
 #section1>h2{
     font-size: 2em;
@@ -189,7 +189,7 @@ header nav a{
     font-weight: lighter;
 }
 #section1>a{
-    border: 2px solid var(--color-w);
+    border: 2px solid white;
     padding: 0.75em;
 }
 #section1>a:hover{
@@ -204,8 +204,8 @@ header nav a{
 #about{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-w);
-    color: rgb(90, 90, 90);
+    background-color: var(--bg-color-white);
+    color: var(--text-color-grey);
 }
 #about h3{
     font-weight: bold;
@@ -244,7 +244,7 @@ header nav a{
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(90, 90, 90);
+    color: var(--text-color-grey);
 }
 #about i{
     color: var(--color-o);
@@ -295,7 +295,7 @@ header nav a{
 /* PORTFOLIO */
 
 #portfolio{
-    background-color: var(--color-w);
+    background-color: var(--bg-color-white);
     border-bottom: 1px solid rgb(228, 225, 225);
 }
 #portfolio .hidden{
@@ -318,7 +318,7 @@ header nav a{
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: var(--color-w);
+    color: var(--text-color-white);
     font-size: 4em;
     opacity: 0.7;  
 }
@@ -326,7 +326,7 @@ header nav a{
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(90, 90, 90);
+    color: var(--text-color-grey);
     margin: 10px 10px 0 0;
 
 }
@@ -340,7 +340,7 @@ header nav a{
     padding : 5px;
 }
 #portfolio .button:hover{
-    color: var(--color-w);
+    color: var(--text-color-white);
     background-color:var(--color-o);
 }
 #portfolio nav{
@@ -364,7 +364,7 @@ header nav a{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: black;
 }
 
 .modalContent{
@@ -390,7 +390,8 @@ header nav a{
 /* TESTIMONIALS */
 
 #testimonials{
-    background-color: var(--color-w);
+    background-color: var(--bg-color-white);
+    color: var(--text-color-black);
 }
 blockquote{
     font-style: italic;
@@ -425,7 +426,7 @@ cite{
     font-weight: bold;
 }
 #testimonials .button:hover{
-    color: var(--color-w);
+    color: var(--text-color-white);
     border: 1px solid var(--color-o);
     background-color:var(--color-o);
 }
@@ -434,7 +435,7 @@ cite{
 /* BUY */
 
 #buy{
-    color: var(--color-w);
+    color: white;
     background-image: url("img/etoile5.jpg"); /* parallax */
     min-height: 250px;
     background-attachment: fixed;
@@ -443,7 +444,7 @@ cite{
     background-size: cover;
 }
 #buy a{
-    color: var(--color-w);
+    color: white;
     border: 1px solid var(--color-o);
     text-decoration: none;
     text-transform: uppercase;
@@ -460,7 +461,7 @@ cite{
 
 /* CONTACT */
 #contact{
-    background-color: var(--color-w); 
+    background-color: var(--bg-color-white); 
 }
 #contact h2{
     color: rgb(90, 90, 90);
@@ -482,7 +483,7 @@ cite{
 
 #contact label{
     text-transform: uppercase;
-    color: rgb(90, 90, 90);
+    color: var(--text-color-grey);
     font-size: 0.8em;
     text-align: left;  
 }
@@ -492,16 +493,16 @@ cite{
 #contact form input[type=submit]{
     background-color: var(--color-o);
     border: 2px solid  var(--color-o);
-    color: var(--color-w);
+    color: var(--text-color-white);
     padding: 10px;
     width: 50%;
     margin-bottom: 0;
     text-transform: uppercase;
 }
 #contact form input[type=submit]:hover{
-    background-color: rgb(207, 100, 0);
-    border: 2px solid  rgb(207, 100, 0);
-    color: var(--color-w);
+    background-color: var(--color-o-hover);
+    border: 2px solid  var(--color-o-hover);
+    color: var(--text-color-white);
 }
 
 /* PAGE */
@@ -509,8 +510,7 @@ cite{
 #page{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-b);
-    color: rgb(211, 209, 209);
+    background-color: var(--bg-color-black);
     font-weight: lighter ;
 }
 
@@ -532,23 +532,23 @@ cite{
 #page input::placeholder {
     font-style: italic;
     font-weight: lighter;
-    color: var(--color-w);
+    color: var(--text-color-white);
     text-align: left; 
     font-size: 0.8em; 
 }
 #page input[type=email]{
     padding: 10px;
-    background-color: rgb(98, 98, 98);
-    color: var(--color-w);
-    border: 1px solid rgb(98, 98, 98);
+    background-color: var(--text-color-grey);
+    color: var(--text-color-white);
+    border: 1px solid var(--text-color-grey);
     width: 75%;
     margin: auto;
 }
 #page input[type=submit]{
     padding: 10px;
-    background-color: var(--color-b);
+    background-color: var(--bg-color-black);
     text-transform: uppercase;
-    color: var(--color-w);
+    color: var(--text-color-white);
     border: 1px solid var(--color-o);
     width: 45%;
     margin: 16px auto;
@@ -566,7 +566,7 @@ footer{
     background-color: #555;
 }
 footer, footer a{
-    color:var(--color-w);
+    color:white;
 }
 footer nav a{
     margin-right: 10px;

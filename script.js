@@ -67,29 +67,29 @@ for (i = 0; i < acc.length; i++) {
 
 
 
- var modals = document.getElementsByClassName("modal");
- var minis = document.getElementsByClassName("modal-mini");
- var modimgs = document.getElementsByClassName("modal-img");
- var j;
+//  var modals = document.getElementsByClassName("modal");
+//  var minis = document.getElementsByClassName("modal-mini");
+//  var modimgs = document.getElementsByClassName("modal-img");
+//  var j;
   
- for (j = 0; j < modals.length; j++)
- {
-     console.log(j);
-     var mod = modals[j];
-     var imaj = modimgs[j];
-     minis[j].addEventListener("click", function()
-     {
-         // var mod = this.nextElementSibling;
-         mod.style.display = "block";
-         // var imaj = mod.img.children[0];
-         imaj.src = this.src;
-     })
-     var span = document.getElementsByClassName("close")[j];
-     span.addEventListener("click", function()
-     {
-         mod.style.display = "none";
-     })
- }
+//  for (j = 0; j < modals.length; j++)
+//  {
+//      console.log(j);
+//      var mod = modals[j];
+//      var imaj = modimgs[j];
+//      minis[j].addEventListener("click", function()
+//      {
+//          // var mod = this.nextElementSibling;
+//          mod.style.display = "block";
+//          // var imaj = mod.img.children[0];
+//          imaj.src = this.src;
+//      })
+//      var span = document.getElementsByClassName("close")[j];
+//      span.addEventListener("click", function()
+//      {
+//          mod.style.display = "none";
+//      })
+//  }
 
 
 
@@ -106,6 +106,27 @@ for (i = 0; i < acc.length; i++) {
 
 
  /* DARK MODE */
+
+ document.addEventListener('DOMContentLoaded', () => {
+
+  const themeStylesheet = document.getElementById('theme');
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+      // if it's light -> go dark
+      if(themeStylesheet.href.includes('light')){
+          themeStylesheet.href = 'dark-theme.css';
+          
+      } else {
+          // if it's dark -> go light
+          themeStylesheet.href = 'light-theme.css';
+          
+
+      }
+  })
+})
+
+
+
 
 //  function darkMode(){
 //    var element = document.main;

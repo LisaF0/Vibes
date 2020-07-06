@@ -1,0 +1,10 @@
+:root{
+    --bg-color-black: black;
+    --text-color-white: white;
+    --bg-color-white: white;
+    --text-color-grey: rgb(90, 90, 90);
+    --text-color-black: black;
+    --color-o: rgb(255,123,0);
+    --color-o-hover:rgb(207, 100, 0);
+    --bg-color-linear-gradient: linear-gradient(180deg, rgba(250, 175, 0, 0.753) 0%, rgba(255,66,66,0.7399334733893557) 15%, rgba(255,154,58,1) 35%, rgba(221,57,57,1) 72%, rgb(219, 151, 48) 100%);
+}
