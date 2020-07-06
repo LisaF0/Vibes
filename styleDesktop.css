@@ -1,4 +1,4 @@
-@media screen and (min-width: 1075px){
+@media screen and (min-width: 1400px){
 
     /* ABOUT */
     #about{
@@ -15,8 +15,13 @@
         padding: 5px;
     }
 
-
-
+    /* PORTFOLIO */
+    #portfolio .container{
+        width: 25%;
+    }
+    #portfolio .hidden{
+        display: initial;
+    }
     /* TESTIMONIALS */
     #testimonials img, #testimonials div{
         float: left;

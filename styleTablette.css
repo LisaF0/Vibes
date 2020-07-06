@@ -34,7 +34,7 @@
 
     /* PORTFLIO */
     .container{
-        width: 25%;
+        width: 50%;
     }
     .container img{
         vertical-align: bottom;
@@ -48,9 +48,7 @@
     #portfolio nav .button{
         margin: 0;
     }
-    #portfolio .hidden{
-        display: initial;
-    }
+   
 
 
     /* CONTACT */

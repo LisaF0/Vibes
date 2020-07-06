@@ -100,18 +100,18 @@
                 <div id="galerie">
 
 
-                    <div class="container">
+                    <div class="container item image">
+                        <i class="far fa-image"></i>
                         <img class="modal-mini" src="img/img1.jpg" alt="wallpaper">
-                        <i class="far fa-image" id="btn"></i>
 
                         <div class="modal">
                                 <span class="close">&times;</span>
-                                <img class="modal-img modalContent" src="img/img1.jpg" alt="wallpaper">
+                                <img class="modal-img modal-content" src="img/img1.jpg">
                         </div>
                     </div>
 
 
-                    <div class="container">
+                    <div class="container item image">
                         <img class="modal-mini" src="img/img2.jpg" alt="wallpaper">
                         <i class="far fa-image"></i>
 
@@ -122,84 +122,73 @@
                     </div>
 
 
-                    <div class="container ">
-                        <img class="modal-mini" src="img/img2.jpg" alt="wallpaper">
+                    <div class="container item audio">
+                        <img class="modal-mini" src="img/img3.png" alt="wallpaper">
                         <i class="far fa-play-circle"></i>
 
                         <div class="modal">
-                                <span class="close">&times;</span>
-                                <img class="modal-img" src="img/img2.jpg" alt="wallpaper">
-                        </div>
-                    </div>
-
-
-                    <div class="container hidden">
-                        <img src="img/img2.jpg" alt="wallpaper">
-                        <i class="far fa-play-circle"></i>
-                        <div class="modal myModal">
-                            <div class="modalContent">
-                                <span class="close">&times;</span>
-                                <img class="modal-img" src="img/img2.jpg" alt="wallpaper">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="container hidden">
-                        <img src="img/img2.jpg" alt="wallpaper">
-                        <i class="fas fa-volume-up"></i>
-                        <div class="modal myModal">
-                            <div class="modalContent">
-                                <span class="close">&times;</span>
-                                <img class="modal-img" src="img/img2.jpg" alt="wallpaper">                                
-                            </div>
-                        </div>                     
-                    </div>
-
-
-                    <div class="container hidden">
-                        <img src="img/img2.jpg" alt="wallpaper">
-                        <i class="fas fa-volume-up"></i>
-                        <div class="modal myModal">
-                            <div class="modalContent">
-                                <span class="close">&times;</span>
-                                <img class="modal-img" src="img/img2.jpg" alt="wallpaper">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="container hidden">
-                        <img src="img/img3.png" alt="wallpaper">
-                        <i class="far fa-image"></i>
-                        <div class="modal myModal">
-                            <div class="modalContent">
                                 <span class="close">&times;</span>
                                 <img class="modal-img" src="img/img3.png" alt="wallpaper">
-                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container item video">
+                        <img src="img/img4.jpg" alt="wallpaper">
+                        <i class="far fa-play-circle"></i>
+                        <div class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-img" src="img/img4.jpg" alt="wallpaper">
                         </div>
                     </div>
 
 
-                    <div class="container hidden">
-                        <img src="img/img4.jpg" alt="walppaper">
-                        <i class="far fa-image"></i>
-                        <div class="modal myModal">
-                            <div class="modalContent">
+                    <div class="container hidden item audio">
+                        <img src="img/img5.jpg" alt="wallpaper">
+                        <i class="fas fa-volume-up"></i>
+                        <div class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-img" src="img/img5.jpg" alt="wallpaper">                                
+                        </div>                  
+                    </div>
+
+
+                    <div class="container hidden item video">
+                        <img src="img/img6.jpg" alt="wallpaper">
+                        <i class="fas fa-volume-up"></i>
+                            <div class="modal">
                                 <span class="close">&times;</span>
-                                <img class="modal-img" src="img/img4.jpg" alt="walppaper">
+                                <img class="modal-img" src="img/img6.jpg" alt="wallpaper">
                             </div>
-                        </div>
+                    </div>
+
+
+                    <div class="container hidden item image">
+                        <img src="img/img7.jpg" alt="wallpaper">
+                        <i class="far fa-image"></i>
+                            <div class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-img" src="img/img7.jpg" alt="wallpaper">
+                            </div>
+                    </div>
+
+
+                    <div class="container hidden item image">
+                        <img src="img/img8.jpg" alt="walppaper">
+                        <i class="far fa-image"></i>
+                            <div class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-img" src="img/img8.jpg" alt="walppaper">
+                            </div>         
                     </div>  
                 </div>
                 <nav>
-                    <div>
-                        <a href="">All</a>
-                        <a href="">Audio</a>
-                        <a href="">Image</a>
-                        <a href="">Video</a>
-                    </div>
-                    <a href="" class="button">Load more</a>
+                    <ul class="tri">
+                        <li class="filter" data-filter="all">All</li>
+                        <li class="filter" data-filter="audio">Audio</li>
+                        <li class="filter" data-filter="image">Image</li>
+                        <li class="filter" data-filter="video">Video</li>
+                    </ul>
+                    <a href="" id="loadMore" class="button">Load more</a>
                 </nav>
             </section>
             <section id="testimonials" class="alignCenter bg-color-white text-color-black"> 
