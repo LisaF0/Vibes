@@ -44,8 +44,6 @@ $(document).ready(function(){
 // ACCORDION
 
 
-
-
 var acc = document.getElementsByClassName("accordionHeader");
 var i;
 
@@ -66,51 +64,13 @@ for (i = 0; i < acc.length; i++) {
 
 
 /* MODAL */
-// 1
-// var modal = document.getElementsByClassName("myModal");
-// var btn = document.getElementsByClassName(["far", "fas"]);  
-// var span = document.getElementsByClassName("close")[0];
-// var j = 0 ;
-// for(var j = 0; i < modal.length; j++){
-//   btn.onclick = function(){
-//     modal.style.display = "block";
-//   }
-//   span.onclick = function(){
-//     modal.style.display = "none";
-//   }
-//   window.onclick = function(event){
-//     if(event.target == modal){
-//       modal.style.display = "none";
-//     }
-//   }
-//  }
-
-
-//2
-// var modal = document.getElementById("myModal");
-// var btn = document.getElementById("btn");  
-// var span = document.getElementsByClassName("close")[0];
-// // var i;
-// // for(var i = 0; i < modal.length; i++){
-//   btn.onclick = function(){
-//     modal.style.display = "block";
-//   }
-//   span.onclick = function(){
-//     modal.style.display = "none";
-//   }
-//   window.onclick = function(event){
-//     if(event.target == modal){
-//       modal.style.display = "none";
-//     }
-//   }
-// // }
 
 
 
- var modals = document.getElementsByClassName("myModal");
+ var modals = document.getElementsByClassName("modal");
  var minis = document.getElementsByClassName("modal-mini");
  var modimgs = document.getElementsByClassName("modal-img");
- var j = 0;
+ var j;
   
  for (j = 0; j < modals.length; j++)
  {
@@ -151,3 +111,9 @@ for (i = 0; i < acc.length; i++) {
 //    var element = document.main;
 //    element.classList.toggle("darkMode");
 //  }
+
+// function toggleDarkLight() {
+//   var body = document.getElementById("body");
+//   var currentClass = body.className;
+//   body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+// }

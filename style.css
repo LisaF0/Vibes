@@ -1,3 +1,22 @@
+:root{
+    --color-w: white;
+    --color-b: black;
+    --color-o: rgb(255,123,0);
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --color-w: black;
+        --color-b: white;
+        --color-o:rgb(0, 132, 255);
+    }
+}
+
+
+
+
+
+
 *{
    box-sizing: border-box;
    font-family: 'Ubuntu', sans-serif; 
@@ -17,8 +36,8 @@ body{
 }
 hr{
     width: 50px;
-    border: 1px solid rgb(255, 123, 0);
-    background-color: rgb(255, 123, 0);
+    border: 1px solid var(--color-o);
+    background-color: var(--color-o);
     margin-bottom: 30px;
 }
 h2{
@@ -61,10 +80,10 @@ h3{
     border-radius: 10px; 
   }
 #myBtn i{
-    color: white;
+    color: var(--color-w);
 }
 #myBtn:hover {
-    background-color: rgb(255, 123, 0); 
+    background-color: var(--color-o); 
   }
 
 /* DARK MODE */
@@ -78,24 +97,10 @@ h3{
     padding: 10px;
 }
 #drop i{
-    color: white;
+    color: var(--color-w);
     cursor: pointer;
 }
-/* @media screen and (prefers-colors-scheme: light){
 
-    main{
-        background-color:#555;
-        color: white;
-    }
-} */
-/* .darkMode{
-    color: white;
-    background-color: #555;
-}
-.lightMode{
-    color:  #555;
-    background-color: white;
-} */
 
 
 
@@ -127,12 +132,12 @@ header nav{
 header nav a{
     text-decoration: none;
     margin: 0.5em;
-    color: white;
+    color: var(--color-w);
     font-weight: bold;
     text-transform: uppercase;
 }
 #burger{
-    color:white;
+    color:var(--color-w);
     cursor: pointer;
     position: absolute;
     top: 2vh;
@@ -173,7 +178,7 @@ header nav a{
     padding: 15% 15% 10% 15%;
 }
 #section1>h2, #section1>p, #section1>a{
-    color: white;
+    color: var(--color-w);
 }
 #section1>h2{
     font-size: 2em;
@@ -184,12 +189,12 @@ header nav a{
     font-weight: lighter;
 }
 #section1>a{
-    border: 2px solid white;
+    border: 2px solid var(--color-w);
     padding: 0.75em;
 }
 #section1>a:hover{
-    border: 2px solid rgb(255, 123, 0);
-    color: rgb(255, 123, 0);
+    border: 2px solid var(--color-o);
+    color: var(--color-o);
 }
 
 
@@ -199,7 +204,7 @@ header nav a{
 #about{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--color-w);
     color: rgb(90, 90, 90);
 }
 #about h3{
@@ -216,7 +221,7 @@ header nav a{
     margin-bottom: 20px;
 }
 #about article a{
-    color: rgb(255, 123, 0);
+    color: var(--color-o);
 }
 #about article a:hover{
     text-decoration: underline;
@@ -242,7 +247,7 @@ header nav a{
     color: rgb(90, 90, 90);
 }
 #about i{
-    color: rgb(255, 123, 0);
+    color: var(--color-o);
     font-size: 1.5em;
 }
 /* #about>div:last-child{
@@ -275,14 +280,14 @@ header nav a{
     font-family: 'fontawesome';
     float: left;
     margin-right: 10px;
-    color:rgb(255, 123, 0);
+    color:var(--color-o);
 }
 .active:before{
     content: '\f068';
     font-family: 'fontawesome';
     float: left;
     margin-right: 10px;
-    color:rgb(255, 123, 0);
+    color:var(--color-o);
 }
 
 
@@ -290,7 +295,7 @@ header nav a{
 /* PORTFOLIO */
 
 #portfolio{
-    background-color: white;
+    background-color: var(--color-w);
     border-bottom: 1px solid rgb(228, 225, 225);
 }
 #portfolio .hidden{
@@ -313,7 +318,7 @@ header nav a{
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: white;
+    color: var(--color-w);
     font-size: 4em;
     opacity: 0.7;  
 }
@@ -326,17 +331,17 @@ header nav a{
 
 }
 #portfolio nav a:hover{
-    color: rgb(255, 123, 0);
+    color: var(--color-o);
 }
 
 #portfolio .button{
-    border: 2px solid rgb(255, 123, 0);
-    color: rgb(255, 123, 0);
+    border: 2px solid var(--color-o);
+    color: var(--color-o);
     padding : 5px;
 }
 #portfolio .button:hover{
-    color: white;
-    background-color:rgb(255, 123, 0);
+    color: var(--color-w);
+    background-color:var(--color-o);
 }
 #portfolio nav{
     margin-top: 20px;
@@ -370,7 +375,7 @@ header nav a{
 
 
 .close{
-    color: white;
+    color: var(--color-w);
     float: right;
     font-size: 4em;
 }
@@ -385,7 +390,7 @@ header nav a{
 /* TESTIMONIALS */
 
 #testimonials{
-    background-color: white;
+    background-color: var(--color-w);
 }
 blockquote{
     font-style: italic;
@@ -412,24 +417,24 @@ cite{
     padding-top:0;
 }
 #testimonials .button{
-    color: rgb(255, 123, 0);
-    border: 1px solid rgb(255, 123, 0);
+    color: var(--color-o);
+    border: 1px solid var(--color-o);
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
     font-weight: bold;
 }
 #testimonials .button:hover{
-    color: white;
-    border: 1px solid rgb(255, 123, 0);
-    background-color:rgb(255, 123, 0);
+    color: var(--color-w);
+    border: 1px solid var(--color-o);
+    background-color:var(--color-o);
 }
 
 
 /* BUY */
 
 #buy{
-    color: white;
+    color: var(--color-w);
     background-image: url("img/etoile5.jpg"); /* parallax */
     min-height: 250px;
     background-attachment: fixed;
@@ -438,8 +443,8 @@ cite{
     background-size: cover;
 }
 #buy a{
-    color: white;
-    border: 1px solid rgb(255, 123, 0);
+    color: var(--color-w);
+    border: 1px solid var(--color-o);
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
@@ -448,20 +453,20 @@ cite{
 }
 
 #buy a:hover{
-    color: rgb(255, 123, 0);
-    border: 1px solid rgb(255, 123, 0);
+    color: var(--color-o);
+    border: 1px solid var(--color-o);
 }
 
 
 /* CONTACT */
 #contact{
-    background-color: white; 
+    background-color: var(--color-w); 
 }
 #contact h2{
     color: rgb(90, 90, 90);
 }
 #contact .color{
-    color:rgb(255, 123, 0);
+    color:var(--color-o);
 }
 
 #contact input, textarea{
@@ -485,9 +490,9 @@ cite{
     text-align: left;
 }
 #contact form input[type=submit]{
-    background-color: rgb(255, 123, 0);
-    border: 2px solid  rgb(255, 123, 0);
-    color: white;
+    background-color: var(--color-o);
+    border: 2px solid  var(--color-o);
+    color: var(--color-w);
     padding: 10px;
     width: 50%;
     margin-bottom: 0;
@@ -496,7 +501,7 @@ cite{
 #contact form input[type=submit]:hover{
     background-color: rgb(207, 100, 0);
     border: 2px solid  rgb(207, 100, 0);
-    color: white;
+    color: var(--color-w);
 }
 
 /* PAGE */
@@ -504,7 +509,7 @@ cite{
 #page{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--color-b);
     color: rgb(211, 209, 209);
     font-weight: lighter ;
 }
@@ -513,7 +518,7 @@ cite{
     margin-bottom: 30px;
 }
 #page a{
-    color:rgb(255, 123, 0);
+    color:var(--color-o);
     text-decoration: none;
 }
 #page h3{
@@ -527,29 +532,29 @@ cite{
 #page input::placeholder {
     font-style: italic;
     font-weight: lighter;
-    color: white;
+    color: var(--color-w);
     text-align: left; 
     font-size: 0.8em; 
 }
 #page input[type=email]{
     padding: 10px;
     background-color: rgb(98, 98, 98);
-    color: white;
+    color: var(--color-w);
     border: 1px solid rgb(98, 98, 98);
     width: 75%;
     margin: auto;
 }
 #page input[type=submit]{
     padding: 10px;
-    background-color: black;
+    background-color: var(--color-b);
     text-transform: uppercase;
-    color: white;
-    border: 1px solid rgb(255, 123, 0);
+    color: var(--color-w);
+    border: 1px solid var(--color-o);
     width: 45%;
     margin: 16px auto;
 }
 #page input[type=submit]:hover{
-    color: rgb(255, 123, 0);
+    color: var(--color-o);
 }
 
 
@@ -561,7 +566,7 @@ footer{
     background-color: #555;
 }
 footer, footer a{
-    color:white;
+    color:var(--color-w);
 }
 footer nav a{
     margin-right: 10px;
