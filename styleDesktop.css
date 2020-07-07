@@ -11,8 +11,11 @@
     }
 
     #about i{
-        float: left;
+        float:left;
         padding: 5px;
+    }
+    #about #accordion i{
+        float: none;
     }
 
     /* PORTFOLIO */

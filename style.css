@@ -253,40 +253,38 @@ header nav a{
 
 /* ACCORDION */
 
-#accordionContainer{
+.accordionContainer{
     border: 1px solid rgb(228, 225, 225);
     padding: 1em;
     margin: 1em;
 }
-#accordionContainer i{
+.accordionContainer i{
     font-size: 1em;
     margin: 5px;
+
 }
-.accordionHeader{
+#accordion h4{
     cursor: pointer;
+    margin: 0;
+}
+#accordion p{
+    display: none;
+} 
+#accordion .acc-open p{
+    display: block;
 }
 
-.accordionContent{
+
+
+
+
+/* .accordionContent{
     padding-left: 1.5em;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-}
-.accordionHeader:before{
-    content: '\f067';
-    
-    font-family: 'fontawesome';
-    float: left;
-    margin-right: 10px;
-    color:var(--color-o);
-}
-.active:before{
-    content: '\f068';
-    font-family: 'fontawesome';
-    float: left;
-    margin-right: 10px;
-    color:var(--color-o);
-}
+} */
+
 
 
 
