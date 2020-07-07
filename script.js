@@ -115,8 +115,29 @@ $(document).ready(function(){
 /* MODAL */
 
 
+
+
+var $modal = $('#modal');
+$('.modal-mini').click(function(){
+  $modal.addClass('.open');
+  
+})
+
+$('.close').click(function(){
+  $modal.removeClass('.open');
+})
+
+// $('.modal-mini').on('click', function(){
+  //   var src = ($(this).attr('src'))
+  //   $(this).attr('src', src);
+  // })
+
+
+
+
+
 // var modals = document.getElementsByClassName("modal");
-// var minis = document.getElementsByClassName("container");
+// var minis = document.getElementsByClassName("modal-mini");
 // var modimgs = document.getElementsByClassName("modal-img");
 // var j;
  

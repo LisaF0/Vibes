@@ -72,7 +72,7 @@ h3{
 /* DARK MODE */
 #drop button{
     position: fixed;
-    top: 5em;
+    top: 6.5em;
     left: 0;
     background-color:#555;
     padding: 10px;
@@ -272,18 +272,10 @@ header nav a{
 } 
 #accordion .acc-open p{
     display: block;
+
 }
 
 
-
-
-
-/* .accordionContent{
-    padding-left: 1.5em;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-} */
 
 
 
@@ -354,16 +346,19 @@ header nav a{
     cursor: pointer;
 }
 
-.modal{
+#modal{
     display: none;
     position: fixed;
     z-index: 10;
     left: 0;
-    top: 0;
+    top: 100px;
     width: 100%;
-    /*height: 100%; */
-    overflow: auto;
+    height: 100%; 
     background-color: rgba(128, 128, 128, 0.308);
+}
+
+#modal.open{
+    display: block;
 }
 
 /*
