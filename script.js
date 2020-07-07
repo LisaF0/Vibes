@@ -115,17 +115,33 @@ $(document).ready(function(){
 /* MODAL */
 
 
+$(document).ready(function() {
+	$('.container').click(function() {
+
+    $('#modal').addClass('active');
+    $('.modal-img').attr('src','img/img1.jpg');
+     });
 
 
-var $modal = $('#modal');
-$('.modal-mini').click(function(){
-  $modal.addClass('.open');
+	});
+	$('.close').click(function() {
+		$('#modal').removeClass('active');
+	});
+
+
+
+
+
+
+// var $modal = $('#modal');
+// $('.modal-mini').click(function(){
+//   $modal.addClass('.open');
   
-})
+// })
 
-$('.close').click(function(){
-  $modal.removeClass('.open');
-})
+// $('.close').click(function(){
+//   $modal.removeClass('.open');
+// })
 
 // $('.modal-mini').on('click', function(){
   //   var src = ($(this).attr('src'))
@@ -133,32 +149,5 @@ $('.close').click(function(){
   // })
 
 
-
-
-
-// var modals = document.getElementsByClassName("modal");
-// var minis = document.getElementsByClassName("modal-mini");
-// var modimgs = document.getElementsByClassName("modal-img");
-// var j;
- 
-// for (j = 0; j < modals.length; j++)
-// {
-//     console.log(j);
-//     var mod = modals[j];
-//     var imaj = modimgs[j];
-//     var minii = minis[j];
-//     minii.addEventListener("click", function()
-//     {
-//         // var mod = this.nextElementSibling;
-//         mod.style.display = "block";
-//         // var imaj = mod.img.children[0];
-//         imaj.src = this.src;
-//     })
-//     var span = document.getElementsByClassName("close")[j];
-//     span.addEventListener("click", function()
-//     {
-//         mod.style.display = "none";
-//     })
-// }
 
 
