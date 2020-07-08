@@ -116,37 +116,20 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
-	$('.container').click(function() {
-
+  $('.container').click(function() { // quand je click sur .container
+    let src = $(this).children('img').attr('src'); // je recuppère dans la variable src l'attr src du children img de this (.container)
     $('#modal').addClass('active');
-    $('.modal-img').attr('src','img/img1.jpg');
-     });
+    $('.modal-img').attr('src',src);
+  });
+});
 
-
-	});
 	$('.modal-close').click(function() {
-		$('#modal').removeClass('active');
+    $('#modal').removeClass('active');
 	});
 
 
 
 
-
-
-// var $modal = $('#modal');
-// $('.modal-mini').click(function(){
-//   $modal.addClass('.open');
-  
-// })
-
-// $('.close').click(function(){
-//   $modal.removeClass('.open');
-// })
-
-// $('.modal-mini').on('click', function(){
-  //   var src = ($(this).attr('src'))
-  //   $(this).attr('src', src);
-  // })
 
 
 
