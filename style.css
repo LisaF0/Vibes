@@ -26,14 +26,12 @@ h2{
     text-transform: uppercase;
     margin: 0;
 }
-
 section{
     padding: 30px;
 }
 h3{
     margin-top: 0;
 }
-
 .bold{
     font-weight: bold;
 }
@@ -48,7 +46,6 @@ h3{
 .alignCenter{
     text-align: center;
 }
-
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed;
@@ -61,14 +58,13 @@ h3{
     cursor: pointer; 
     padding: 7px; 
     border-radius: 10px; 
-  }
+}
 #myBtn i{
     color: white;
 }
 #myBtn:hover {
     background-color: var(--color-o); 
-  }
-
+}
 /* DARK MODE */
 #drop button{
     position: fixed;
@@ -82,9 +78,7 @@ h3{
     cursor: pointer;
 }
 
-
 /* COLOR */
-
 .bg-color-black{
     background-color: var(--bg-color-black);
 }
@@ -103,13 +97,7 @@ h3{
 
 
 
-
-
-
-
-
 /* HEADER */
-
 #wrapper header{
     display: flex;
     align-items: center;
@@ -120,7 +108,6 @@ h3{
     background-color: #555;
     z-index:5;
 } 
-
 header img{
     height: 30px;
     margin: 16px 
@@ -128,7 +115,6 @@ header img{
 header nav{
     display: none;
 }
-
 header nav a{
     text-decoration: none;
     margin: 0.5em;
@@ -143,7 +129,6 @@ header nav a{
     top: 2vh;
     right: 2vh;
 }
-
 .mobile{
     position: fixed;
     display: flex;
@@ -165,13 +150,9 @@ header nav a{
 }
 
 
-
-
 /* MAIN */
 
 /* SECTION1 */
-
-
 #section1{
     background-image: url("img/forestBg.jpg");
     background-size: cover;
@@ -198,9 +179,7 @@ header nav a{
 }
 
 
-
 /* ABOUT */
-
 #about{
     display: flex;
     flex-direction: column;
@@ -226,7 +205,6 @@ header nav a{
 #about article a:hover{
     text-decoration: underline;
 }
-
 #about div>dl dd{
     margin: 0;
 }
@@ -252,7 +230,6 @@ header nav a{
 }
 
 /* ACCORDION */
-
 .accordionContainer{
     border: 1px solid rgb(228, 225, 225);
     padding: 1em;
@@ -261,7 +238,6 @@ header nav a{
 .accordionContainer i{
     font-size: 1em;
     margin: 5px;
-
 }
 #accordion h4{
     cursor: pointer;
@@ -272,16 +248,9 @@ header nav a{
 } 
 #accordion .acc-open p{
     display: block;
-
 }
 
-
-
-
-
-
 /* PORTFOLIO */
-
 #portfolio{
     background-color: var(--bg-color-white);
     border-bottom: 1px solid rgb(228, 225, 225);
@@ -293,7 +262,6 @@ header nav a{
     height: 100%;
     width: 100%;
 }
-
 .container{
     position: relative;
     width: 100%;
@@ -324,7 +292,6 @@ header nav a{
 #portfolio nav li:hover{
     color: var(--color-o);
 }
-
 #portfolio .button{
     border: 2px solid var(--color-o);
     color: var(--color-o);
@@ -354,15 +321,14 @@ header nav a{
     left: 0;
     top:0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(128, 128, 128, 0.507);
-    
-    
 }
 #modal img{  
-    width: 100%;
-    padding: 40px;
+    widows: 80vw;
+    overflow: hidden;
+    object-fit: contain;
 }
 
 #modal.active{
@@ -372,14 +338,13 @@ header nav a{
     
 }
 
-
-
 .modal-close{
     position: absolute;
     top: 0;
     right: 0;
     color: white;
     font-size: 4em;
+    padding: 1em;
 }
 .modal-close:hover, .close:focus{
     color: #000;

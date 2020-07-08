@@ -1,19 +1,17 @@
 //SCROLL TO TOP
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {// quand l'user scrolls down 20px à partir du haut du document
+    mybutton.style.display = "block";//le button apparait
   } else {
-    mybutton.style.display = "none";
+    mybutton.style.display = "none";// sinon le button disparait
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+function topFunction() { // quand l'user click sur le button, scroll to top du document
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -43,12 +41,12 @@ $(document).ready(function(){
 
 // ACCORDION
 
-$("#accordion h4").click(function(){
-  $(".accordionContainer").removeClass("acc-open")
-  $(this).parent().addClass("acc-open")
+$("#accordion h4").click(function(){ // quand l'user click sur un h4 du #accordion
+  $(".accordionContainer").removeClass("acc-open") // ça enlève la classe acc-open du accordionContainer
+  $(this).parent().addClass("acc-open")// ça ajoute la classe acc-open au parent du h4 sur lequel l'user click
 
-  $(".accordionContainer i").removeClass("fa-minus").addClass("fa-plus")
-  $(this).children("i").removeClass("fa-plus").addClass("fa-minus")
+  $(".accordionContainer i").removeClass("fa-minus").addClass("fa-plus")// ça enleve le + et le remplace par le -
+  $(this).children("i").removeClass("fa-plus").addClass("fa-minus")// sur CE accordionContainer ça enlève le + et ajoute -
 })
 
 
@@ -61,22 +59,18 @@ $("#accordion h4").click(function(){
   const themeToggle = document.getElementById('theme-toggle');
   // quand je clique sur l'élément avec l'id theme-toggle, ici la goutte : 
   themeToggle.addEventListener('click', () => {
-      // si le stylesheet href inclu light alors le remplacer par 'dark-theme.css"
+      // si le stylesheet href inclut light alors le remplacer par 'dark-theme.css"
       if(themeStylesheet.href.includes('light')){
           themeStylesheet.href = 'dark-theme.css';
-          
       } else {
           // si non remplacer par 'light-theme.css'
           themeStylesheet.href = 'light-theme.css';
-          
-
       }
   })
 })
 
 
 // TRI
-
 function hideAllExcept(filterName){ // hide all sauf filterName
   if(filterName === "all"){ // si le filter c'est all
     $("div.item") // alors toute les class item dans des div
@@ -97,7 +91,7 @@ $(function(){
   })
 })
 
-
+// LOAD MORE
 $(document).ready(function(){
   $(".container").slice(0, 4).show(); // la classe container affiche 4 img
   $("#loadMore").on("click", function(e){ // quand je clique sur le boutton loadmore, 
@@ -107,30 +101,37 @@ $(document).ready(function(){
       $("#loadMore").text("No Content").addClass("noContent");// on modifie le boutton loadMore par noContent
     }
   });
-  
 })
 
 
 
 /* MODAL */
-
-
 $(document).ready(function() {
   $('.container').click(function() { // quand je click sur .container
-    let src = $(this).children('img').attr('src'); // je recuppère dans la variable src l'attr src du children img de this (.container)
-    $('#modal').addClass('active');
-    $('.modal-img').attr('src',src);
+    
+    let src = $(this).children('img').attr('src') // je recuppère dans la variable src l'attr src du children img de this (.container)
+    $('#modal').addClass('active')
+    $('.modal-img').attr('src',src)// j'applique la src que j'ai récup à mon img dans la modal
+  })
+  $('.modal-close').click(function() {// quand je clique sur la croix ça ferme la modal
+    $('#modal').removeClass('active')  
+  })
+  $('#modal').on('click', function(){
+    $('#modal').toggleClass('active');
   });
-});
 
-	$('.modal-close').click(function() {
-    $('#modal').removeClass('active');
-	});
+})
+	
 
 
+  
+  // $(document).ready(function(){
+  //   $("span").click(function(event){
+  //     event.stopPropagation();
+  //     
+  //   });
 
-
-
-
-
-
+  //   $("div").click(function(){
+  //     alert("The div element was clicked.");
+  //   });
+  // });
