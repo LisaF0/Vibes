@@ -124,7 +124,7 @@ $(document).ready(function() {
 
 
 	});
-	$('.close').click(function() {
+	$('.modal-close').click(function() {
 		$('#modal').removeClass('active');
 	});
 

@@ -346,7 +346,7 @@ header nav a{
     cursor: pointer;
 }
 
-
+/* MODAL */
 #modal{
     display: none;
     position: fixed;
@@ -374,14 +374,14 @@ header nav a{
 
 
 
-.close{
+.modal-close{
     position: absolute;
     top: 0;
     right: 0;
     color: white;
     font-size: 4em;
 }
-.close:hover, .close:focus{
+.modal-close:hover, .close:focus{
     color: #000;
     cursor: pointer;
 } 
