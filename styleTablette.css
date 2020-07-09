@@ -102,4 +102,7 @@
         flex-direction: initial;
         justify-content: space-around;
     }
+    footer p{
+        margin: 0;
+    }
 }

@@ -344,43 +344,8 @@ header nav a{
     cursor: pointer;
 }
 
-/* MODAL */
-#modal{
-    display: none;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top:0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(128, 128, 128, 0.507);
-}
-#modal img{  
-    widows: 80vw;
-    overflow: hidden;
-    object-fit: contain;
-}
 
-#modal.active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
 
-.modal-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    font-size: 4em;
-    padding: 1em;
-}
-.modal-close:hover, .close:focus{
-    color: #000;
-    cursor: pointer;
-} 
 
 
 
@@ -571,6 +536,57 @@ footer nav a{
 }
 footer p{
     margin-top: 0;
+}
+
+
+/* MODAL */
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.507);
+}
+#modal-content{ 
+    position: relative; 
+    overflow: hidden;
+    animation: modalReveal 1s forwards;
+    
+}
+.modal-img{
+    width: 80vw;
+    
+}
+#modal.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 3em;
+    padding: 0.5em;
+}
+.modal-close:hover, .close:focus{
+    text-shadow: 3px 3px 3px var(--color-o);
+    cursor: pointer;
+} 
+@keyframes modalReveal{
+    from{
+        width:0vw;
+        opacity: 0;
+    }
+    to{
+        width: 80vw;
+        opacity: 1;
+    }
 }
 
 /* reste à faire :

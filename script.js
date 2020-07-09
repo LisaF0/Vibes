@@ -117,13 +117,14 @@ $(document).ready(function() {
   $('.modal-close').click(function() {// quand je clique sur la croix ça ferme la modal
     $('#modal').removeClass('active')  
   })
-  $('#modal').click(function(event){
-    if(event.target === this) // si l'event cible === #modal on retire la class active de modal // qd on clique en dehors de l'img ça ferme la modal
-    $('#modal').removeClass('active')
-  });
+  $("#modal").click(function(event){
+    if(event.target === this){ // si l'user click sur le #modal mais pas ce qu'il contient alors enlève la class active de #modal
+        $("#modal").removeClass("active")
+    }
+  })
 
 })
-	
+  
 
 
   
