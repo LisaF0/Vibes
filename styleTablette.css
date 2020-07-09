@@ -3,22 +3,16 @@
         max-width: 1400px;
         margin: auto;
     }
-    #section1 p, h2, #section1 a, #buy p, #buy a{ 
-        text-align: center;
-    }
-    /* HEADER */
+    /* ---------------------HEADER */
     #wrapper header{
         justify-content: space-around;
     }
-
-    /* NAV */
+    /* ----------------------NAV */
     header img{
         height: 50px;
     }
-    
     header nav{
         display: flex;
-        align-items: center;
     }
     header nav a{
         margin-right: 25px;
@@ -30,10 +24,7 @@
     #burger{
         display: none;
     }
-
-
-    /* ABOUT */
-
+    /* -----------------------------ABOUT */
     #about{
         display: flex;
         flex-wrap: wrap;
@@ -43,17 +34,12 @@
      #about article{
         width: 100%;
     }
-    #about>div{
-        width: 35%;
+    #about #accordion{
+        width: 45%;
     }
-   
-
-    /* PORTFOLIO */
+    /* -----------------------PORTFOLIO */
     .container{
         width: 50%;
-    }
-    .container img{
-        vertical-align: bottom;
     }
     #portfolio nav{
         margin-top: 15px;
@@ -64,25 +50,19 @@
     #portfolio nav .button{
         margin: 0;
     }
-   
-
-
-    /* CONTACT */
+    /* -----------------------CONTACT */
     #contact form{
         display: flex;
-      
     }
-
     #contact form>div{
         flex: 1;
         padding: 0 1em;
     }
-
-    /* PAGES */
+    /* -----------------------PAGES */
     #page{
         flex-direction: initial;
         justify-content: space-evenly;
-        text-align: left;
+        text-align: left; 
     }
     #page hr{
         margin-left: 0;
@@ -97,7 +77,7 @@
         margin: 16px 0;
     }
 
-    /* FOOTER */
+    /* ------------------------------FOOTER */
     footer{
         flex-direction: initial;
         justify-content: space-around;

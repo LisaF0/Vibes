@@ -1,6 +1,6 @@
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1200px){
 
-    /* ABOUT */
+    /*----------------------------------ABOUT */
     #about{
         justify-content: space-evenly;
     }
@@ -10,29 +10,27 @@
     main #about>div, main #about article{ 
         width: 25%;
     }
-
-  
-    #about #accordion i{
-        float: none;
+    #about>div:nth-child(2){
+        padding-left: 30px;
     }
-
-    /* PORTFOLIO */
+    /* --------------------------------PORTFOLIO */
     #portfolio .container{
         width: 25%;
     }
-    #portfolio .hidden{
+    #portfolio .hiddenMobile{
         display: initial;
     }
-    /* TESTIMONIALS */
+    #portfolio .hidden{
+        display: none;
+    }
+    /* ------------------------------TESTIMONIALS */
     #testimonials img, #testimonials div{
         float: left;
         text-align: left;
         margin: 20px;
-       
     }
     #testimonials div:nth-child(2) img, #testimonials div:nth-child(2){
         text-align: right;
         float: right;
     }
-
 }

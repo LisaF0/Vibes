@@ -1,4 +1,4 @@
-//SCROLL TO TOP
+//--------------------------SCROLL TO TOP
 var mybutton = document.getElementById("myBtn");
 
 window.onscroll = function() {scrollFunction()};
@@ -17,7 +17,7 @@ function topFunction() { // quand l'user click sur le button, scroll to top du d
 }
 
 
-// MENU BURGER
+// ----------------------------MENU BURGER
 function toggleNav(){
   let width = $(window).width()
   if(width > 800){
@@ -39,20 +39,20 @@ $(document).ready(function(){
   })
 })
 
-// ACCORDION
+//------------------------------ ACCORDION
 
 $("#accordion h4").click(function(){ // quand l'user click sur un h4 du #accordion
-  $(".accordionContainer").removeClass("acc-open") // ça enlève la classe acc-open du accordionContainer
+  $(".acc-container").removeClass("acc-open") // ça enlève la classe acc-open du acc-container
   $(this).parent().addClass("acc-open")// ça ajoute la classe acc-open au parent du h4 sur lequel l'user click
   
-  $(".accordionContainer i").removeClass("fa-minus").addClass("fa-plus")// ça enleve le + et le remplace par le -
-  $(this).children("i").removeClass("fa-plus").addClass("fa-minus")// sur CE accordionContainer ça enlève le + et ajoute -
+  $(".acc-container i").removeClass("fa-minus").addClass("fa-plus")// ça enleve le + et le remplace par le -
+  $(this).children("i").removeClass("fa-plus").addClass("fa-minus")// sur CE acc-container ça enlève le + et ajoute -
   
 })
 
 
 
- /* DARK MODE */
+ /*------------------------------- DARK MODE */
 
  document.addEventListener('DOMContentLoaded', () => {
 
@@ -71,42 +71,44 @@ $("#accordion h4").click(function(){ // quand l'user click sur un h4 du #accordi
 })
 
 
-// TRI
+// --------------------------------------TRI
 function hideAllExcept(filterName){ // hide all sauf filterName
   if(filterName === "all"){ // si le filter c'est all
-    $("div.item") // alors toute les class item dans des div
-    .css('display','block')// on ajoute display block en css
+    $("div.item").css('display','block')// alors toute les class item dans des div on ajoute display block en css
   } else {
-    $("div.item")// sinon pour toute les class item dans les div
-    .not("."+filterName) // qui ne sont pas = à .filterName on les hide
-    .hide()
+    $("div.item").not("."+filterName).hide() //sinon pour toute les class item dans les div qui n'ont pas la class .filterName on les hide
   }
+  if($(".container:hidden").length !== 0){// si ya d'autre img à afficher, afficher load more dans le button sinon no content
+    $("#loadMore").text("Load More")
+  }
+  else{$("#loadMore").text("No Content")}
 }
 
 $(function(){
   $('.filter').click(function(){ // chaque fois qu'on clique sur un filtre
-    $('.item').hide().show()// ça hide ou show l'item
-
-    console.log(this.dataset.filter) // affiche les attr data des buttons
+    $('.item').show()// ça  show l'item
+    
     hideAllExcept(this.dataset.filter)//  hide tout sauf le filter concerné
   })
 })
 
-// LOAD MORE
+// ---------------------------------------LOAD MORE
 $(document).ready(function(){
-  $(".container").slice(0, 4).show(); // la classe container affiche 4 img
+  $(".container").slice(0, 4).show() // la classe container affiche 4 img
   $("#loadMore").on("click", function(e){ // quand je clique sur le boutton loadmore, 
-    e.preventDefault(); //l'évènement par défaut
-    $(".container:hidden").slice(0, 4).slideDown();// les container hidden, slidedown par 4
+    e.preventDefault() //l'évènement par défaut
+    $(".container:hidden").slice(0, 4).slideDown()// les container hidden, slidedown par 4
     if($(".container:hidden").length == 0) {// lorsqu'il n'y a plus de contenu en plus, 
-      $("#loadMore").text("No Content").addClass("noContent");// on modifie le boutton loadMore par noContent
+      $("#loadMore").text("No Content")// on modifie le boutton loadMore par noContent
     }
+
   });
+  
 })
 
 
 
-/* MODAL */
+/* ---------------------------------------MODAL */
 $(document).ready(function() {
   $('.container').click(function() { // quand je click sur .container
     

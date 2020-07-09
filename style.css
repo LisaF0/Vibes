@@ -12,10 +12,6 @@ body{
     background: var(--bg-color-linear-gradient);
     background-size: cover; 
 }
-#wrapper{
-    max-width: 1024px;
-    margin: auto;
-}
 hr{
     width: 50px;
     border: 1px solid var(--color-o);
@@ -47,13 +43,12 @@ h3{
     text-align: center;
 }
 #myBtn {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     bottom: 20px; 
     right: 30px; 
-    z-index: 99; /* Make sure it does not overlap */
+    z-index: 99;
     border: none; 
-    outline: none; /* Remove outline */
     background-color: #555;
     cursor: pointer; 
     padding: 7px; 
@@ -65,20 +60,23 @@ h3{
 #myBtn:hover {
     background-color: var(--color-o); 
 }
-/* DARK MODE */
-#drop button{
+/* ------------------------------DARK MODE */
+#drop span{
     position: fixed;
     top: 6.5em;
     left: 0;
     background-color:#555;
     padding: 10px;
-}
-#drop i{
-    color: var(--text-color-white);
+    border-radius: 20px;
     cursor: pointer;
+    z-index: 10;
 }
 
-/* COLOR */
+#drop i{
+    color: var(--color-o);
+    font-size: 1em; 
+}
+/*--------------------------------COLOR */
 .bg-color-black{
     background-color: var(--bg-color-black);
 }
@@ -94,10 +92,7 @@ h3{
 .color-orange{
     color: var(--color-o);
 }
-
-
-
-/* HEADER */
+/* --------------------------------HEADER */
 #wrapper header{
     display: flex;
     align-items: center;
@@ -137,22 +132,18 @@ header nav a{
     justify-content: space-around;
     right: 0;
     top: 0;
-	opacity: 0;
-    overflow: hidden;
-    height: 0vh;
-    transition: height 1s, opacity 1s;
+    transition:  transform .4s;
     background-color: #555;
-    margin:0;
+    transform: translate3d(0, -100%, 0)
 }
 .mobile.open{
-    height: 50vh;
-    opacity: 1;
+    transform: translate3d(0, 0, 0)
 }
 
 
-/* MAIN */
+/* ----------------------------------------MAIN */
 
-/* SECTION1 */
+/* ---------------------------SECTION1 */
 #section1{
     background-image: url("img/forestBg.jpg");
     background-size: cover;
@@ -178,7 +169,6 @@ header nav a{
     color: var(--color-o);
 }
 
-
 /* ABOUT */
 #about{
     display: flex;
@@ -188,7 +178,6 @@ header nav a{
     color: var(--text-color-grey);
 }
 #about h3{
-    font-weight: bold;
     font-size: 2em;
     text-shadow: 0.5px 0.5px rgb(143, 143, 143);
 }
@@ -201,9 +190,6 @@ header nav a{
 }
 #about article a{
     color: var(--color-o);
-}
-#about article a:hover{
-    text-decoration: underline;
 }
 #about div>dl dd{
     margin: 0;
@@ -218,14 +204,6 @@ header nav a{
 #about div:last-child{
     margin-bottom: 0;
 }
-#about div div a{
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--text-color-grey);
-}
-
-
 #about dl{
     margin: 1em 1em 1em 3em;
 }
@@ -239,15 +217,14 @@ header nav a{
     font-size: 2em;
     color: var(--color-o);
 }
-
-/* ACCORDION */
-.accordionContainer{
+/*-------------------------------- ACCORDION */
+.acc-container{
     border: 1px solid rgb(228, 225, 225);
     padding: 1em 1em 1em 2.5em;
     margin: 1em;
     position: relative;
 }
-.accordionContainer i{
+.acc-container i{
     position: absolute;
     left: 1em;
     color: var(--color-o);
@@ -256,35 +233,34 @@ header nav a{
     cursor: pointer;
     margin: 0;
 }
-
-
 #accordion p{
     margin: 0;
 }  
-
-
-.accordionContainer p{
+.acc-container p{
     overflow: hidden;
     transition: height 0.5s;
-    font-size: 0.8em;
-    
+    font-size: 0.8em; 
 }
-.accordionContainer:not(.acc-open) p{
+.acc-container:not(.acc-open) p{
     height: 0;
     padding-top: 0;
-
 }
-
 .acc-open p{
-    height: 3.5em;
+    height: 4em;
     padding-top: 1em;
 
 }
-
-/* PORTFOLIO */
+/* ------------------------------PORTFOLIO */
 #portfolio{
     background-color: var(--bg-color-white);
     border-bottom: 1px solid rgb(228, 225, 225);
+}
+#portfolio #galerie{
+    display: flex;
+    flex-wrap: wrap;
+}
+#portfolio .hiddenMobile{
+    display: none;
 }
 #portfolio .hidden{
     display: none;
@@ -318,7 +294,6 @@ header nav a{
     color: var(--text-color-grey);
     margin: 10px 10px 0 0;
     cursor: pointer;
-
 }
 #portfolio nav li:hover{
     color: var(--color-o);
@@ -335,23 +310,14 @@ header nav a{
 #portfolio nav{
     margin-top: 20px;
 }
-#galerie{
-    display: flex;
-    flex-wrap: wrap;
-}
 .container:hover i{
     display: inline-flex;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-/* TESTIMONIALS */
-
+.no-content{
+    content:"No Content";
+}
+/* --------------------------------TESTIMONIALS */
 #testimonials{
     background-color: var(--bg-color-white);
     color: var(--text-color-black);
@@ -374,9 +340,6 @@ cite{
 #testimonials div>div:last-child{
     border-bottom: none;
 }
-#testimonials div:nth-child(5){
-    border-bottom: none;
-}
 #testimonials .paddingTopZero{
     padding-top:0;
 }
@@ -393,10 +356,7 @@ cite{
     border: 1px solid var(--color-o);
     background-color:var(--color-o);
 }
-
-
-/* BUY */
-
+/* ---------------------------------------BUY */
 #buy{
     color: white;
     background-image: url("img/etoile5.jpg"); /* parallax */
@@ -413,16 +373,12 @@ cite{
     text-transform: uppercase;
     padding: 10px;
     font-weight: bold;
-    
 }
-
 #buy a:hover{
     color: var(--color-o);
     border: 1px solid var(--color-o);
 }
-
-
-/* CONTACT */
+/* -----------------------------------CONTACT */
 #contact{
     background-color: var(--bg-color-white); 
 }
@@ -432,9 +388,7 @@ cite{
 #contact .color{
     color:var(--color-o);
 }
-
 #contact input, textarea{
-    
     width: 100%;
     margin: auto;
     background-color: rgb(206, 203, 203);
@@ -442,8 +396,6 @@ cite{
     margin-bottom: 30px;
     padding: 10px 0;
 }
-
-
 #contact label{
     text-transform: uppercase;
     color: var(--text-color-grey);
@@ -467,16 +419,13 @@ cite{
     border: 2px solid  var(--color-o-hover);
     color: var(--text-color-white);
 }
-
-/* PAGE */
-
+/* -------------------------------------PAGE */
 #page{
     display: flex;
     flex-direction: column;
     background-color: var(--bg-color-black);
     font-weight: lighter ;
 }
-
 #page div{
     margin-bottom: 30px;
 }
@@ -509,19 +458,19 @@ cite{
 }
 #page input[type=submit]{
     padding: 10px;
-    background-color: var(--bg-color-black);
+    background-color: var(--color-o);
     text-transform: uppercase;
     color: var(--text-color-white);
-    border: 1px solid var(--color-o);
+    border: 2px solid  var(--color-o);
     width: 45%;
     margin: 16px auto;
 }
 #page input[type=submit]:hover{
-    color: var(--color-o);
+    background-color: var(--color-o-hover);
+    border: 2px solid  var(--color-o-hover);
+    color: var(--text-color-white);
 }
-
-
-/* FOOTER */
+/* ------------------------------------FOOTER */
 footer{
     display:flex;
     flex-direction: column;
@@ -537,9 +486,7 @@ footer nav a{
 footer p{
     margin-top: 0;
 }
-
-
-/* MODAL */
+/* -----------------------------------MODAL */
 #modal{
     display: none;
     position: fixed;
@@ -555,11 +502,9 @@ footer p{
     position: relative; 
     overflow: hidden;
     animation: modalReveal 1s forwards;
-    
 }
 .modal-img{
     width: 80vw;
-    
 }
 #modal.active{
     display: flex;
@@ -588,12 +533,3 @@ footer p{
         opacity: 1;
     }
 }
-
-/* reste à faire :
-modal pour les img https://www.w3schools.com/howto/howto_css_modals.asp
-accordion https://codepen.io/maesi/pen/aFBoc
-menu burger stylé  https://codepen.io/duarteleme/pen/XNROQM
-goute d'eau dark mode ou autre https://codepen.io/ttorquati/pen/abvvwmX
-trie audio video etc + LOAD MORE
-pour finir Responsive desktop
-*/
