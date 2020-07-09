@@ -182,7 +182,8 @@ header nav a{
 /* ABOUT */
 #about{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: var(--bg-color-white);
     color: var(--text-color-grey);
 }
@@ -197,7 +198,6 @@ header nav a{
 #about article p:last-child, #about div>p:last-child{
     font-size: 1em;
     font-weight: lighter;
-    margin-bottom: 20px;
 }
 #about article a{
     color: var(--color-o);
@@ -224,30 +224,61 @@ header nav a{
     text-decoration: none;
     color: var(--text-color-grey);
 }
-#about i{
+
+
+#about dl{
+    margin: 1em 1em 1em 3em;
+}
+#about dt{
+    position: relative;
+}
+#about dl i{
+    position: absolute;
+    top:0;
+    left: -1.5em;
+    font-size: 2em;
     color: var(--color-o);
-    font-size: 1.5em;
 }
 
 /* ACCORDION */
 .accordionContainer{
     border: 1px solid rgb(228, 225, 225);
-    padding: 1em;
+    padding: 1em 1em 1em 2.5em;
     margin: 1em;
+    position: relative;
 }
 .accordionContainer i{
-    font-size: 1em;
-    margin: 5px;
+    position: absolute;
+    left: 1em;
+    color: var(--color-o);
 }
 #accordion h4{
     cursor: pointer;
     margin: 0;
 }
+
+
 #accordion p{
-    display: none;
-} 
-#accordion .acc-open p{
-    display: block;
+    margin: 0;
+}  
+
+
+.accordionContainer p{
+    overflow: hidden;
+    transition: height 0.5s;
+    font-size: 0.8em;
+    
+}
+.accordionContainer:not(.acc-open) p{
+    height: 0;
+    padding-top: 0;
+
+}
+
+.acc-open p{
+    height: 3.5em;
+    padding-top: 1em;
+
 }
 
 /* PORTFOLIO */
@@ -431,7 +462,7 @@ cite{
     background-color: var(--bg-color-white); 
 }
 #contact h2{
-    color: rgb(90, 90, 90);
+    color: var(--text-color-black);
 }
 #contact .color{
     color:var(--color-o);

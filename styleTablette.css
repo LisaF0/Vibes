@@ -32,7 +32,23 @@
     }
 
 
-    /* PORTFLIO */
+    /* ABOUT */
+
+    #about{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        flex-direction: initial;
+    }
+     #about article{
+        width: 100%;
+    }
+    #about>div{
+        width: 35%;
+    }
+   
+
+    /* PORTFOLIO */
     .container{
         width: 50%;
     }

@@ -2,18 +2,16 @@
 
     /* ABOUT */
     #about{
-        flex-direction: initial;
         justify-content: space-evenly;
+    }
+    #about article{
         text-align: left;
     }
-    #about>div, #about article{ 
+    main #about>div, main #about article{ 
         width: 25%;
     }
 
-    #about i{
-        float:left;
-        padding: 5px;
-    }
+  
     #about #accordion i{
         float: none;
     }

@@ -44,9 +44,10 @@ $(document).ready(function(){
 $("#accordion h4").click(function(){ // quand l'user click sur un h4 du #accordion
   $(".accordionContainer").removeClass("acc-open") // ça enlève la classe acc-open du accordionContainer
   $(this).parent().addClass("acc-open")// ça ajoute la classe acc-open au parent du h4 sur lequel l'user click
-
+  
   $(".accordionContainer i").removeClass("fa-minus").addClass("fa-plus")// ça enleve le + et le remplace par le -
   $(this).children("i").removeClass("fa-plus").addClass("fa-minus")// sur CE accordionContainer ça enlève le + et ajoute -
+  
 })
 
 
@@ -116,8 +117,9 @@ $(document).ready(function() {
   $('.modal-close').click(function() {// quand je clique sur la croix ça ferme la modal
     $('#modal').removeClass('active')  
   })
-  $('#modal').on('click', function(){
-    $('#modal').toggleClass('active');
+  $('#modal').click(function(event){
+    if(event.target === this) // si l'event cible === #modal on retire la class active de modal // qd on clique en dehors de l'img ça ferme la modal
+    $('#modal').removeClass('active')
   });
 
 })
@@ -125,13 +127,3 @@ $(document).ready(function() {
 
 
   
-  // $(document).ready(function(){
-  //   $("span").click(function(event){
-  //     event.stopPropagation();
-  //     
-  //   });
-
-  //   $("div").click(function(){
-  //     alert("The div element was clicked.");
-  //   });
-  // });
