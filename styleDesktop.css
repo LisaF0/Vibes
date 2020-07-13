@@ -7,7 +7,7 @@
     #about article{
         text-align: left;
     }
-    main #about>div, main #about article{ 
+    main #about>div, main #about article, #about #accordion{ 
         width: 25%;
     }
     #about>div:nth-child(2){

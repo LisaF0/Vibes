@@ -136,7 +136,7 @@ header nav a{
     background-color: #555;
     transform: translate3d(0, -100%, 0)
 }
-.mobile.open{
+.mobile.menu-open{
     transform: translate3d(0, 0, 0)
 }
 
@@ -506,7 +506,7 @@ footer p{
 .modal-img{
     width: 80vw;
 }
-#modal.active{
+#modal.modal-active{
     display: flex;
     justify-content: center;
     align-items: center;

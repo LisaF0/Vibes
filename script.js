@@ -21,7 +21,7 @@ function topFunction() { // quand l'user click sur le button, scroll to top du d
 function toggleNav(){
   let width = $(window).width()
   if(width > 800){
-    $(".menu").removeClass(["mobile","open"])
+    $(".menu").removeClass(["mobile","menu-open"])
     $("#burger").toggleClass(["fa-times", "fa-bars"])
   } else {
     $(".menu").addClass("mobile")
@@ -31,13 +31,16 @@ function toggleNav(){
 $(document).ready(function(){
   toggleNav()
   $("#burger").click(function(){
-    $(".menu").toggleClass("open")
+    $(".menu").toggleClass("menu-open")
     $(this).toggleClass(["fa-times", "fa-bars"])
   })
   $(window).resize(() =>{
     toggleNav()
   })
 })
+
+
+
 
 //------------------------------ ACCORDION
 
@@ -57,15 +60,15 @@ $("#accordion h4").click(function(){ // quand l'user click sur un h4 du #accordi
  document.addEventListener('DOMContentLoaded', () => {
 
   const themeStylesheet = document.getElementById('theme');
-  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggle = document.getElementById('themeToggle');
   // quand je clique sur l'élément avec l'id theme-toggle, ici la goutte : 
   themeToggle.addEventListener('click', () => {
-      // si le stylesheet href inclut light alors le remplacer par 'dark-theme.css"
+      // si le stylesheet href inclut light alors le remplacer par 'darkTheme.css"
       if(themeStylesheet.href.includes('light')){
-          themeStylesheet.href = 'dark-theme.css';
+          themeStylesheet.href = 'darkTheme.css';
       } else {
-          // si non remplacer par 'light-theme.css'
-          themeStylesheet.href = 'light-theme.css';
+          // si non remplacer par 'lightTheme.css'
+          themeStylesheet.href = 'lightTheme.css';
       }
   })
 })
@@ -113,15 +116,15 @@ $(document).ready(function() {
   $('.container').click(function() { // quand je click sur .container
     
     let src = $(this).children('img').attr('src') // je recuppère dans la variable src l'attr src du children img de this (.container)
-    $('#modal').addClass('active')
+    $('#modal').addClass('modal-active')
     $('.modal-img').attr('src',src)// j'applique la src que j'ai récup à mon img dans la modal
   })
   $('.modal-close').click(function() {// quand je clique sur la croix ça ferme la modal
-    $('#modal').removeClass('active')  
+    $('#modal').removeClass('modal-active')  
   })
   $("#modal").click(function(event){
     if(event.target === this){ // si l'user click sur le #modal mais pas ce qu'il contient alors enlève la class active de #modal
-        $("#modal").removeClass("active")
+        $("#modal").removeClass("modal-active")
     }
   })
 
