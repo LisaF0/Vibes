@@ -104,9 +104,7 @@ $(document).ready(function(){
     if($(".container:hidden").length == 0) {// lorsqu'il n'y a plus de contenu en plus, 
       $("#loadMore").text("No Content")// on modifie le boutton loadMore par noContent
     }
-
   });
-  
 })
 
 
