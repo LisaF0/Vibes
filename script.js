@@ -112,7 +112,6 @@ $(document).ready(function(){
 /* ---------------------------------------MODAL */
 $(document).ready(function() {
   $('.container').click(function() { // quand je click sur .container
-    
     let src = $(this).children('img').attr('src') // je recuppère dans la variable src l'attr src du children img de this (.container)
     $('#modal').addClass('modal-active')
     $('.modal-img').attr('src',src)// j'applique la src que j'ai récup à mon img dans la modal
@@ -128,6 +127,126 @@ $(document).ready(function() {
 
 })
   
+// --------------------- MODAL AUDIO & VIDEO
+// $(document).ready(function() {
+//   $('.container').click(function() {
+//   if($(this).hasClass('video')){
+//   	let src = $(this).children('video').attr('src')
+//     $('#modal').addClass('modal-active')
+//     $('.modal-video').attr('src', src)
+//     $('.modal-img, .modal-audio').css('display', 'none')
+//   }
+//   if($(this).hasClass('audio')){
+//   	let src = $(this).children('audio').attr('src')
+//     $('#modal').addClass('modal-active')
+//     $('.modal-audio').attr('src', src)
+//     $('.modal-img, .modal-video').css('display', 'none')
+//     }
+//     if($(this).hasClass('image')) {
+//     let src = $(this).children('img').attr('src') 
+//     $('#modal').addClass('modal-active')
+//     $('.modal-img').attr('src',src)
+//     $('.modal-video, .modal-audio').css('display', 'none')
+//     }  
+//   })
+//   $('.modal-close').click(function() {
+//     $('#modal').removeClass('modal-active')  
+//   })
+//   $("#modal").click(function(event){
+//     if(event.target === this){ 
+//         $("#modal").removeClass("modal-active")
+//     }
+//   })
+
+// })
+// ------------CSS
+
+// #modal{
+//   display: none;
+//   position: fixed;
+//   z-index: 10;
+//   left: 0;
+//   top:0;
+//   bottom: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: rgba(128, 128, 128, 0.507);
+// }
+// #modal-content{ 
+//   position: relative; 
+//   overflow: hidden;
+//   animation: modalReveal 1s forwards;
+// }
+// .modal-img, .modal-video, .modal-audio{
+//   width: 80vw;
+// }
+// #modal.modal-active{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .modal-close{
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   color: white;
+//   font-size: 3em;
+//   padding: 0.5em;
+// }
+// .modal-close:hover, .close:focus{
+//   text-shadow: 3px 3px 3px var(--color-o);
+//   cursor: pointer;
+// } 
+// @keyframes modalReveal{
+//   from{
+//       width:0vw;
+//       opacity: 0;
+//   }
+//   to{
+//       width: 80vw;
+//       opacity: 1;
+//   }
+// }
+
+// .modal-mini{
+// width: 250px;
+// }
+
+// #portfolio #galerie{
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
 
-  
+// ------------HTML
+// <section id="portfolio" class="alignCenter bg-color-white text-color-grey">
+// <div id="galerie">
+//     <div class="container item image">
+//         <i class="far fa-image"></i>
+//         <img class="modal-mini" src="https://cdna.artstation.com/p/assets/images/images/026/744/108/large/arturo-serrano-bird-house.jpg?1589589727" alt="wallpaper">
+//     </div>
+//     <div class="container item image">
+//         <img class="modal-mini" src="https://cdna.artstation.com/p/assets/images/images/026/744/108/large/arturo-serrano-bird-house.jpg?1589589727" alt="wallpaper">
+//         <i class="far fa-image"></i>
+//     </div>
+//     <div class="container item audio">
+//         <img class="modal-mini" src="https://cdna.artstation.com/p/assets/images/images/026/744/108/large/arturo-serrano-bird-house.jpg?1589589727" alt="wallpaper">
+//         <i class="far fa-play-circle"></i>
+//     </div>
+//     <div class="container item video">
+//         <img class="modal-mini" src="https://cdna.artstation.com/p/assets/images/images/026/744/108/large/arturo-serrano-bird-house.jpg?1589589727" alt="wallpaper">
+//         <video src="https://www.youtube.com/watch?v=yBOv-4ndFGw"></video>
+//         <i class="far fa-play-circle"></i>
+//     </div>
+// </div>
+    
+// </section>
+
+// <div id="modal">
+// <figure id="modal-content">
+// <img class="modal-img ">
+// <video class="modal-video" controls></video>
+// <audio class="modal-audio" controls></audio>
+// <span class="modal-close">&times;</span>
+// </figure>
+// </div>
